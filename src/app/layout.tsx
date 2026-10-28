@@ -8,9 +8,8 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/layout/app-sidebar";
 import { Variable, Weight } from "lucide-react";
 
-// 👇👇👇 1. TAMBAHAN DARI SAYA: Import komponen LayoutWrapper
+
 import { LayoutWrapper } from "@/components/layout/layout-wrapper";
-// 👆👆👆 =======================================================
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,16 +31,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
         
-        {/* 👇👇👇 2. TAMBAHAN & PENYESUAIAN DARI SAYA 👇👇👇 */}
-        {/* Saya mengganti barisan kode Sidebar dengan LayoutWrapper.
-            Di dalam LayoutWrapper inilah logika menyembunyikan sidebar
-            saat di halaman login/register akan berjalan secara otomatis. */}
+      
         
         <LayoutWrapper>
           {children}
         </LayoutWrapper>
         
-        {/* 👆👆👆 ======================================================= */}
+      
 
       </body>
     </html>
